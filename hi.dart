@@ -1,6 +1,11 @@
 void main() {
-  String name = "chan";
-  bool chan = true;
-  int age = 12;
-  double money = 12.5;
+  var giveMeFive = true;
+  var numbers1 = [
+    1,
+    2,
+    3,
+    4,
+    if (giveMeFive) 5,
+  ];
+  print(numbers1);
 }
