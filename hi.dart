@@ -1,10 +1,7 @@
 void main() {
-  var oldFriends = ['John', 'Paul', 'George', 'Ringo'];
-  var newFriends = [
-    'lewis',
-    'ralph',
-    for (var friend in oldFriends) "z $friend",
-  ];
-
-  print(newFriends);
+  Map<List<int>, bool> player = {
+    [1, 2, 3]: true,
+    [4, 5, 6]: false,
+    [7, 8, 9]: true,
+  };
 }
