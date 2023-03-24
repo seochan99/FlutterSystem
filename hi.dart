@@ -1,7 +1,9 @@
-String sayHello(String name, int age, [String? contry = 'cuba']) =>
-    "Hi, my name is $name, I'm $age years old and I'm from $contry";
+String capitalize(String? name) => name?.toUpperCase() ?? "No name";
 
 void main() {
-  var results = sayHello("nico", 12);
-  print(results);
+  String? name;
+  name ??= "chan";
+
+  capitalize("chan");
+  capitalize(null);
 }
