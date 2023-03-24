@@ -1,9 +1,9 @@
-String capitalize(String? name) => name?.toUpperCase() ?? "No name";
+typedef ListOfInts = List<int>;
 
-void main() {
-  String? name;
-  name ??= "chan";
+ListOfInts reverse(ListOfInts list) {
+  return list.reversed.toList();
+}
 
-  capitalize("chan");
-  capitalize(null);
+void main(){
+  print(reverse([1,2,3,4,5]));
 }
