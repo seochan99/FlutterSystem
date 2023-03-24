@@ -1,11 +1,6 @@
 void main() {
-  var giveMeFive = true;
-  var numbers1 = [
-    1,
-    2,
-    3,
-    4,
-    if (giveMeFive) 5,
-  ];
-  print(numbers1);
+  var name = 'chan';
+  var age = 10;
+  var greeting = "hello $name zzz I'm ${age + 2}";
+  print(greeting);
 }
