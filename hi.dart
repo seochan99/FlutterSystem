@@ -1,9 +1,14 @@
-typedef ListOfInts = List<int>;
+class Player {
+  final String name = 'chan';
+  int xp = 1500;
 
-ListOfInts reverse(ListOfInts list) {
-  return list.reversed.toList();
+  void sayHello() {
+    var name;
+    print('Hello, ${this.name}');
+  }
 }
 
-void main(){
-  print(reverse([1,2,3,4,5]));
+void main() {
+  var player = Player();
+  player.sayHello();
 }
