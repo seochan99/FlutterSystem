@@ -51,6 +51,16 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  void resetPreesed() {
+    // 타이머 취소
+    timer.cancel();
+
+    setState(() {
+      isRunning = false;
+      totalSeconds = twentyFiveMinutes;
+    });
+  }
+
   String format(int seconds) {
     var duration = Duration(seconds: seconds);
     return duration.toString().split(".").first.substring(2, 7);
@@ -77,15 +87,29 @@ class _HomeScreenState extends State<HomeScreen> {
           //엄청 큰 아이콘 버튼이 될 예정
           Flexible(
             flex: 3,
-            child: Center(
-              child: IconButton(
-                iconSize: 120,
-                color: Theme.of(context).cardColor,
-                onPressed: isRunning ? onPausePreesed : onStartPreesed,
-                icon: Icon(isRunning
-                    ? Icons.pause_circle_outline
-                    : Icons.play_circle_outline),
-              ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: IconButton(
+                    iconSize: 120,
+                    color: Theme.of(context).cardColor,
+                    onPressed: isRunning ? onPausePreesed : onStartPreesed,
+                    icon: Icon(isRunning
+                        ? Icons.pause_circle_outline
+                        : Icons.play_circle_outline),
+                  ),
+                ),
+                const SizedBox(height: 60),
+                Center(
+                  child: IconButton(
+                    iconSize: 120,
+                    color: Theme.of(context).cardColor,
+                    onPressed: resetPreesed,
+                    icon: const Icon(Icons.restart_alt_outlined),
+                  ),
+                ),
+              ],
             ),
           ),
           Flexible(
