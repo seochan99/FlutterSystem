@@ -16,7 +16,9 @@ class App extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch(
           backgroundColor: const Color(0xFFE7626C),
         ),
+        // 글자 테마
         textTheme: const TextTheme(
+          // 제목
           displayLarge: TextStyle(
             color: Color(0xFF232B55),
           ),
